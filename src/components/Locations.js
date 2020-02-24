@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Text, View, ActivityIndicator, StyleSheet, ScrollView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import FollowButton from './FollowButton';
 import LocationService from '../services/LocationService';
 
@@ -94,7 +93,6 @@ export default class Locations extends Component {
             let users = this.state.locations.map((val, key) => {
                 return <View key={key} style={styles.item}>
                     <View style={styles.title}>
-                        <Ionicons name="md-pin" size={30} color="black" style={{}} />
                         <Text style={styles.cityName}>{val.address.city}</Text>
                     </View>
                     <View>
@@ -133,7 +131,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 20,
         margin: 20,
-        width: '75%',
+        width: '65%',
         height: 170,
         borderBottomWidth: 1,
         borderRadius: 2,
@@ -151,6 +149,6 @@ const styles = StyleSheet.create({
     },
     distance: {
         fontSize: 16,
-        padding: 30,
+        padding: 25,
     },
 });
